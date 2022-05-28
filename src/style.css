@@ -6,4 +6,5 @@ body {
 }
 p {
     font-size: large;
+    margin-inline-start: 14px;
 }
