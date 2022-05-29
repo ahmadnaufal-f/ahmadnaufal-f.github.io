@@ -1,5 +1,7 @@
-const para = document.createElement("p");
-const node = document.createTextNode("ini cuman percobaan");
-para.appendChild(node);
+import { createEle } from "./component/component";
 
-document.body.appendChild(para);
+const attribute = {
+    "id": "test",
+    "class": "cx-title"
+}
+const p = createEle("p", attribute, "percobaan 2");
