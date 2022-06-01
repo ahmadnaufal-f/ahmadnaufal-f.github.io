@@ -1,7 +1,11 @@
-import { createEle } from "./component/component";
+import { Component, Dom } from "./component";
 
 const attribute = {
-    "id": "test",
-    "class": "cx-title"
+    id: "test",
+    class: "cx-title"
 }
-const p = createEle("p", attribute, "percobaan 2");
+const p = Dom.p(attribute);
+
+const body = new Component('body');
+
+p.appendTo(body);
