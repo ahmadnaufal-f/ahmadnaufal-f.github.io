@@ -24,20 +24,7 @@ module.exports = {
             {
                 enforce: 'post',
                 test: /\.css$/i,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: false
-                        }
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            url: false
-                        }
-                    }
-                ]
+                use: [MiniCssExtractPlugin.loader, "css-loader"]
             },
         ]
     },
