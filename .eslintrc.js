@@ -9,7 +9,5 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "skipBlankLines": false,
-        "ignoreComments": false
     }
 }

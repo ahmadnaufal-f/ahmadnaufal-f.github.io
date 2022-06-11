@@ -38,11 +38,16 @@ export function li(...args) {
     return createEle('li', ...args);
 }
 
+export function img(...args) {
+    return createEle('li', ...args);
+}
+
 export const Dom = {
     div,
     p,
     a,
     span,
     ul,
-    li
+    li,
+    img
 };

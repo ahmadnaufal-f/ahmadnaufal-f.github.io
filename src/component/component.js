@@ -43,7 +43,8 @@ export class Component {
     }
 
     static isElement(obj) {
-        return (typeof HTMLElement === 'object');
+        return (typeof HTMLElement === 'object' ? obj instanceof HTMLElement : // DOM2
+            Boolean(obj) && typeof obj === 'object' && obj !== null && obj.nodeType === 1 && typeof obj.nodeName === 'string');
     }
 
     appendTo(obj) {
@@ -53,6 +54,17 @@ export class Component {
         }
 
         obj.appendChild(this.ele);
+
+        return this;
+    }
+
+    appendChild(obj) {
+        obj = Component.toElement(obj);
+        if (!obj) {
+            return this;
+        }
+
+        this.ele.appendChild(obj);
 
         return this;
     }
